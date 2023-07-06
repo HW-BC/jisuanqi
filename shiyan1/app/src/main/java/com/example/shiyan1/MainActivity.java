@@ -234,6 +234,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             num1 = Double.parseDouble(strnum1);
             if(num1 > 0){
                 result = Math.sqrt(num1);
+                //cal_result.setText("√"+num1+"="+result + "");
                 cal_result.setText(result + "");
             }else{
 //                toast发送消息
@@ -273,12 +274,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     String jiaResult = jia.format(result);
 //                    cal_result.setText(num1+op+num2+"="+jiaResult+"");
                     cal_result.setText(jiaResult+"");
-                    //cal_result.setText(result+"");
                     break;
                 case "-":
                     result=num1-num2;
                     DecimalFormat jian = new DecimalFormat("#.#############");
                     String jianResult = jian.format(result);
+                    //cal_result.setText(num1+op+num2+"="+jianResult+"");
                     cal_result.setText(jianResult+"");
                    // cal_result.setText(result+"");
                     break;
@@ -286,8 +287,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     result=num1*num2;
                     DecimalFormat cheng = new DecimalFormat("#.#############");
                     String chengResult = cheng.format(result);
+                    //cal_result.setText(num1+op+num2+"="+chengResult+"");
                     cal_result.setText(chengResult+"");
-//                    cal_result.setText(result+"");
                     break;
                 case "/":
                     if(num2==0){
@@ -297,6 +298,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     result=num1/num2;
                     DecimalFormat chu = new DecimalFormat("#.#############");
                     String chuResult = chu.format(result);
+                    //cal_result.setText(num1+op+num2+"="+chuResult+"");
                     cal_result.setText(chuResult+"");
                     break;
                 default:
